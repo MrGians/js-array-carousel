@@ -27,8 +27,23 @@ const previousButton = document.getElementById("previous");
 // Array contenente il percorso delle immagini
 const gallerySources = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"];
 
-
-// Creo variabile di appoggio
+// Creo variabile di appoggio per immagine corrente
 let galleryIndex = 0;
 
 
+// Creo dinamicamente le immagini
+for(let i = 0; i < gallerySources.length; i++) {
+
+  // Creo l'elemento immagine
+  let images = `<img src="${gallerySources[i]}" alt="immagine-${i + 1}">`;
+    
+  // Stampo l'elemento immagine sul DOM ad ogni ciclo
+  carouselGallery.innerHTML += images;
+
+}
+
+
+// Seleziono tutti gli elementi IMG dal DOM ed al primo aggiungo la classe Active
+document.querySelectorAll("img")[galleryIndex].classList.add("active")
+
+  
