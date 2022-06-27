@@ -44,6 +44,33 @@ for(let i = 0; i < gallerySources.length; i++) {
 
 
 // Seleziono tutti gli elementi IMG dal DOM ed al primo aggiungo la classe Active
-document.querySelectorAll("img")[galleryIndex].classList.add("active")
+const gallery = document.querySelectorAll('img');
+gallery[galleryIndex].classList.add('active');
 
-  
+
+// Evento di scorrimento al Click del bottone destro
+nextButton.addEventListener("click", function(){
+
+  // Rimuovo la classe Active dall'elemento immagine precedente
+  gallery[galleryIndex].classList.remove("active");
+  // Cambio immagine corrente tramite la variabile di appoggio
+  galleryIndex++;
+
+  // Aggiungo la classe al nuovo elemento
+  gallery[galleryIndex].classList.add("active");
+
+})
+
+
+// Evento di scorrimento al Click del bottone sinistro
+previousButton.addEventListener("click", function(){
+
+  // Rimuovo la classe Active dall'elemento immagine precedente
+  gallery[galleryIndex].classList.remove("active");
+  // Cambio immagine corrente tramite la variabile di appoggio
+  galleryIndex--;
+
+  // Aggiungo la classe al nuovo elemento
+  gallery[galleryIndex].classList.add("active");
+
+})
