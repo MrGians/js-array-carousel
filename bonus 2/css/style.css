@@ -1,0 +1,55 @@
+/*********** Generics ***********/
+
+#carousel {
+    height: 350px;
+    width: 650px;
+    border: 2px solid black;
+
+    margin: 100px auto;
+    position: relative;
+}
+
+#carousel #gallery {
+    border: 2px solid black;
+    height: 100%;
+}
+
+#carousel #gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    display: none;
+}
+
+#carousel #gallery .active {display: block;}
+
+#carousel .bi {
+    position: absolute;
+    font-size: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#carousel #previous {right: 105%;}
+#carousel #next {left: 105%;}
+
+
+/* BONUS 2 */
+
+#thumbnail {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.thumbnail-images {
+    height: 100px;
+    margin: 10px;
+    width: calc(100% / 5 - 20px);
+    opacity: 0.5;
+}
+
+.thumbnail-images.active {
+    opacity: 1;
+}
