@@ -16,3 +16,26 @@
 // BONUS 2:
 // Creare delle miniature di tutte le immagni, in cui dovrà apparire in evidenza l’immagine equivalente a quella attiva.
 
+// Variabili Globali
+const carousel = document.getElementById("carousel");
+const carouselGallery = document.querySelectorAll("#carousel .gallery");
+
+
+// Array contenente il percorso delle immagini
+const gallerySources = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"];
+
+
+// Creo variabile di appoggio
+let galleryIndex = 0;
+
+
+for(let i = 0; i < gallerySources.length; i++) {
+  
+  let images = document.createElement("img");
+
+  images.src = gallerySources[galleryIndex];
+  images.classList.add("active");
+  console.log(images)
+
+  galleryIndex++;
+}
